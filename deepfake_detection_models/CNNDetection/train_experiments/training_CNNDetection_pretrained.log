@@ -1,0 +1,816 @@
+nohup: ignoring input
+wandb: Appending key for api.wandb.ai to your netrc file: /home/jovyan/.netrc
+wandb: Currently logged in as: jabroni_ss (dungeon_as_fate). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.6 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.17.5
+wandb: Run data is saved locally in /home/jovyan/shares/SR006.nfs2/almas_deepfake_detection/deepfake_detection_models/CNNDetection/wandb/run-20240809_223349-udlfrm32
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run test-4class-resnet-car-cat-chair-horse2024_08_09_22_33_48
+wandb: ⭐️ View project at https://wandb.ai/dungeon_as_fate/CNNDetection_test_start
+wandb: 🚀 View run at https://wandb.ai/dungeon_as_fate/CNNDetection_test_start/runs/udlfrm32
+----------------- Options ---------------
+                     arch: res50                         
+               batch_size: 64                            
+                    beta1: 0.9                           
+                blur_prob: 0                             
+                 blur_sig: 0.5                           
+          checkpoints_dir: ./checkpoints                 
+                class_bal: False                         
+                  classes:                               
+           continue_train: False                         
+                 cropSize: 224                           
+                 data_aug: False                         
+                 dataroot: ./dataset/                    
+          earlystop_epoch: 5                             
+                    epoch: latest                        
+              epoch_count: 1                             
+                      fff: 1                             
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                  isTrain: True                          	[default: None]
+               jpg_method: cv2                           
+                 jpg_prob: 0                             
+                 jpg_qual: 75                            
+               last_epoch: -1                            
+                 loadSize: 256                           
+                loss_freq: 400                           
+                       lr: 0.0001                        
+                     mode: binary                        
+                     name: experiment_name               
+                new_optim: False                         
+                    niter: 10000                         
+                  no_flip: False                         
+              num_threads: 4                             
+                    optim: adam                          
+           resize_or_crop: scale_and_crop                
+                rz_interp: bilinear                      
+          save_epoch_freq: 20                            
+         save_latest_freq: 2000                          
+           serial_batches: False                         
+                   suffix:                               
+              train_split: train                         
+                val_split: val                           
+----------------- End -------------------
+start_training.py
+Model is running on device: cuda:0
+cwd: /home/jovyan/shares/SR006.nfs2/almas_deepfake_detection/deepfake_detection_models/CNNDetection
+2024_08_09_22_34_37 Train loss: 0.08872050046920776 at step: 400 lr 0.0001
+2024_08_09_22_35_16 Train loss: 0.0012425124878063798 at step: 800 lr 0.0001
+2024_08_09_22_35_54 Train loss: 0.0031757140532135963 at step: 1200 lr 0.0001
+2024_08_09_22_36_32 Train loss: 0.008284180425107479 at step: 1600 lr 0.0001
+2024_08_09_22_37_10 Train loss: 0.0021449525374919176 at step: 2000 lr 0.0001
+2024_08_09_22_37_48 Train loss: 0.0015006954781711102 at step: 2400 lr 0.0001
+2024_08_09_22_38_27 Train loss: 0.0034353507217019796 at step: 2800 lr 0.0001
+2024_08_09_22_39_05 Train loss: 0.0019445049110800028 at step: 3200 lr 0.0001
+2024_08_09_22_39_43 Train loss: 0.00022029568208381534 at step: 3600 lr 0.0001
+2024_08_09_22_40_21 Train loss: 0.02475481480360031 at step: 4000 lr 0.0001
+2024_08_09_22_40_59 Train loss: 0.0011778709013015032 at step: 4400 lr 0.0001
+saving the model at the end of epoch 0, iters 4501
+(Val @ epoch 0) acc: 0.821625; ap: 0.9719400310094741
+Validation accuracy increased (-inf --> 0.821625).  Saving model ...
+*************************
+2024_08_09_22_41_30
+(0 progan    ) acc: 81.9; ap: 97.2
+(1 stylegan  ) acc: 56.0; ap: 80.2
+(2 stylegan2 ) acc: 55.0; ap: 78.9
+(3 biggan    ) acc: 55.7; ap: 69.6
+(4 cyclegan  ) acc: 62.0; ap: 75.3
+(5 stargan   ) acc: 63.5; ap: 94.9
+(6 gaugan    ) acc: 54.3; ap: 68.8
+(7 deepfake  ) acc: 68.0; ap: 90.6
+(8 Mean      ) acc: 62.0; ap: 81.9
+*************************
+2024_08_09_22_44_18
+2024_08_09_22_44_49 Train loss: 0.005785929039120674 at step: 4800 lr 0.0001
+2024_08_09_22_45_27 Train loss: 0.001253435853868723 at step: 5200 lr 0.0001
+2024_08_09_22_46_05 Train loss: 0.0020160970743745565 at step: 5600 lr 0.0001
+2024_08_09_22_46_43 Train loss: 0.0022829051595181227 at step: 6000 lr 0.0001
+2024_08_09_22_47_22 Train loss: 0.00014550209743902087 at step: 6400 lr 0.0001
+2024_08_09_22_48_00 Train loss: 0.006812861189246178 at step: 6800 lr 0.0001
+2024_08_09_22_48_38 Train loss: 8.141337457345799e-05 at step: 7200 lr 0.0001
+2024_08_09_22_49_16 Train loss: 0.0021294497419148684 at step: 7600 lr 0.0001
+2024_08_09_22_49_54 Train loss: 0.001302301767282188 at step: 8000 lr 0.0001
+2024_08_09_22_50_32 Train loss: 0.007039304822683334 at step: 8400 lr 0.0001
+2024_08_09_22_51_10 Train loss: 0.010109939612448215 at step: 8800 lr 0.0001
+(Val @ epoch 1) acc: 0.973125; ap: 0.997116669795403
+Validation accuracy increased (0.821625 --> 0.973125).  Saving model ...
+*************************
+2024_08_09_22_51_49
+(0 progan    ) acc: 97.5; ap: 99.8
+(1 stylegan  ) acc: 78.8; ap: 95.2
+(2 stylegan2 ) acc: 73.0; ap: 96.3
+(3 biggan    ) acc: 70.2; ap: 73.2
+(4 cyclegan  ) acc: 66.2; ap: 71.5
+(5 stargan   ) acc: 99.7; ap: 100.0
+(6 gaugan    ) acc: 66.3; ap: 68.6
+(7 deepfake  ) acc: 80.4; ap: 91.2
+(8 Mean      ) acc: 79.0; ap: 87.0
+*************************
+2024_08_09_22_54_36
+2024_08_09_22_54_56 Train loss: 0.00020664866315200925 at step: 9200 lr 0.0001
+2024_08_09_22_55_34 Train loss: 0.0011014228221029043 at step: 9600 lr 0.0001
+2024_08_09_22_56_12 Train loss: 0.17800341546535492 at step: 10000 lr 0.0001
+2024_08_09_22_56_50 Train loss: 0.006669598165899515 at step: 10400 lr 0.0001
+2024_08_09_22_57_29 Train loss: 0.00030544702894985676 at step: 10800 lr 0.0001
+2024_08_09_22_58_07 Train loss: 0.015556063503026962 at step: 11200 lr 0.0001
+2024_08_09_22_58_45 Train loss: 0.0024648159742355347 at step: 11600 lr 0.0001
+2024_08_09_22_59_27 Train loss: 0.002528339857235551 at step: 12000 lr 0.0001
+2024_08_09_23_00_17 Train loss: 7.5219541031401604e-06 at step: 12400 lr 0.0001
+2024_08_09_23_01_15 Train loss: 0.0011104195145890117 at step: 12800 lr 0.0001
+2024_08_09_23_02_04 Train loss: 0.012718678452074528 at step: 13200 lr 0.0001
+(Val @ epoch 2) acc: 0.974625; ap: 0.9978125617929736
+Validation accuracy increased (0.973125 --> 0.974625).  Saving model ...
+*************************
+2024_08_09_23_03_00
+(0 progan    ) acc: 98.0; ap: 99.8
+(1 stylegan  ) acc: 73.6; ap: 93.1
+(2 stylegan2 ) acc: 75.8; ap: 95.7
+(3 biggan    ) acc: 65.5; ap: 75.9
+(4 cyclegan  ) acc: 64.0; ap: 70.8
+(5 stargan   ) acc: 79.3; ap: 99.8
+(6 gaugan    ) acc: 54.2; ap: 57.2
+(7 deepfake  ) acc: 51.4; ap: 97.8
+(8 Mean      ) acc: 70.2; ap: 86.3
+*************************
+2024_08_09_23_05_50
+2024_08_09_23_06_01 Train loss: 0.00034012511605396867 at step: 13600 lr 0.0001
+2024_08_09_23_06_39 Train loss: 1.2888993296655826e-05 at step: 14000 lr 0.0001
+2024_08_09_23_07_18 Train loss: 4.615531724994071e-05 at step: 14400 lr 0.0001
+2024_08_09_23_07_55 Train loss: 9.622750440030359e-06 at step: 14800 lr 0.0001
+2024_08_09_23_08_34 Train loss: 0.053951676934957504 at step: 15200 lr 0.0001
+2024_08_09_23_09_12 Train loss: 4.1333341869176365e-06 at step: 15600 lr 0.0001
+2024_08_09_23_09_50 Train loss: 0.027311956509947777 at step: 16000 lr 0.0001
+2024_08_09_23_10_28 Train loss: 5.521926505025476e-05 at step: 16400 lr 0.0001
+2024_08_09_23_11_06 Train loss: 8.562514267396182e-06 at step: 16800 lr 0.0001
+2024_08_09_23_11_44 Train loss: 0.00022292952053248882 at step: 17200 lr 0.0001
+2024_08_09_23_12_22 Train loss: 0.0007448027026839554 at step: 17600 lr 0.0001
+2024_08_09_23_13_01 Train loss: 0.00046941774780862033 at step: 18000 lr 0.0001
+(Val @ epoch 3) acc: 0.9715; ap: 0.995827745839752
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_09_23_13_20
+(0 progan    ) acc: 97.6; ap: 99.7
+(1 stylegan  ) acc: 77.4; ap: 92.3
+(2 stylegan2 ) acc: 74.4; ap: 95.0
+(3 biggan    ) acc: 65.3; ap: 68.1
+(4 cyclegan  ) acc: 73.9; ap: 79.9
+(5 stargan   ) acc: 98.6; ap: 100.0
+(6 gaugan    ) acc: 60.5; ap: 62.7
+(7 deepfake  ) acc: 90.1; ap: 96.8
+(8 Mean      ) acc: 79.7; ap: 86.8
+*************************
+2024_08_09_23_16_04
+2024_08_09_23_16_44 Train loss: 5.654204414895503e-06 at step: 18400 lr 0.0001
+2024_08_09_23_17_22 Train loss: 0.00041595628135837615 at step: 18800 lr 0.0001
+2024_08_09_23_18_00 Train loss: 0.0007330226944759488 at step: 19200 lr 0.0001
+2024_08_09_23_18_38 Train loss: 0.01719014160335064 at step: 19600 lr 0.0001
+2024_08_09_23_19_16 Train loss: 0.0087537607178092 at step: 20000 lr 0.0001
+2024_08_09_23_19_54 Train loss: 0.00017632941307965666 at step: 20400 lr 0.0001
+2024_08_09_23_20_32 Train loss: 0.00042364042019471526 at step: 20800 lr 0.0001
+2024_08_09_23_21_10 Train loss: 0.00019279755360912532 at step: 21200 lr 0.0001
+2024_08_09_23_21_48 Train loss: 0.00012745369167532772 at step: 21600 lr 0.0001
+2024_08_09_23_22_26 Train loss: 3.926685167243704e-05 at step: 22000 lr 0.0001
+2024_08_09_23_23_04 Train loss: 0.0002511883503757417 at step: 22400 lr 0.0001
+(Val @ epoch 4) acc: 0.990375; ap: 0.9992737508357505
+Validation accuracy increased (0.974625 --> 0.990375).  Saving model ...
+*************************
+2024_08_09_23_23_34
+(0 progan    ) acc: 99.0; ap: 100.0
+(1 stylegan  ) acc: 81.4; ap: 93.4
+(2 stylegan2 ) acc: 81.1; ap: 98.3
+(3 biggan    ) acc: 67.6; ap: 75.8
+(4 cyclegan  ) acc: 63.4; ap: 70.4
+(5 stargan   ) acc: 96.9; ap: 100.0
+(6 gaugan    ) acc: 58.7; ap: 62.8
+(7 deepfake  ) acc: 85.3; ap: 97.7
+(8 Mean      ) acc: 79.2; ap: 87.3
+*************************
+2024_08_09_23_26_18
+2024_08_09_23_26_48 Train loss: 8.763657206145581e-06 at step: 22800 lr 0.0001
+2024_08_09_23_27_26 Train loss: 5.79727065996849e-06 at step: 23200 lr 0.0001
+2024_08_09_23_28_04 Train loss: 0.000108891494164709 at step: 23600 lr 0.0001
+2024_08_09_23_28_42 Train loss: 0.0007582047255709767 at step: 24000 lr 0.0001
+2024_08_09_23_29_21 Train loss: 9.054497240867931e-06 at step: 24400 lr 0.0001
+2024_08_09_23_30_00 Train loss: 0.00038133346242830157 at step: 24800 lr 0.0001
+2024_08_09_23_30_38 Train loss: 2.9991633709869348e-05 at step: 25200 lr 0.0001
+2024_08_09_23_31_16 Train loss: 0.00023966107983142138 at step: 25600 lr 0.0001
+2024_08_09_23_31_54 Train loss: 0.001639325637370348 at step: 26000 lr 0.0001
+2024_08_09_23_32_32 Train loss: 0.01834685169160366 at step: 26400 lr 0.0001
+2024_08_09_23_33_10 Train loss: 0.0034600868821144104 at step: 26800 lr 0.0001
+(Val @ epoch 5) acc: 0.988; ap: 0.9993268255591485
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_09_23_33_49
+(0 progan    ) acc: 98.7; ap: 99.9
+(1 stylegan  ) acc: 79.3; ap: 89.4
+(2 stylegan2 ) acc: 70.6; ap: 95.9
+(3 biggan    ) acc: 65.1; ap: 72.7
+(4 cyclegan  ) acc: 64.2; ap: 71.3
+(5 stargan   ) acc: 98.2; ap: 100.0
+(6 gaugan    ) acc: 55.1; ap: 59.9
+(7 deepfake  ) acc: 92.1; ap: 97.8
+(8 Mean      ) acc: 77.9; ap: 85.9
+*************************
+2024_08_09_23_36_35
+2024_08_09_23_36_55 Train loss: 0.006035754457116127 at step: 27200 lr 0.0001
+2024_08_09_23_37_33 Train loss: 7.46805380913429e-05 at step: 27600 lr 0.0001
+2024_08_09_23_38_11 Train loss: 2.0955890249751974e-06 at step: 28000 lr 0.0001
+2024_08_09_23_38_49 Train loss: 0.0005602676537819207 at step: 28400 lr 0.0001
+2024_08_09_23_39_27 Train loss: 5.547331238631159e-05 at step: 28800 lr 0.0001
+2024_08_09_23_40_05 Train loss: 0.0014456475619226694 at step: 29200 lr 0.0001
+2024_08_09_23_40_44 Train loss: 1.443393193767406e-05 at step: 29600 lr 0.0001
+2024_08_09_23_41_22 Train loss: 0.00010170361201744527 at step: 30000 lr 0.0001
+2024_08_09_23_42_00 Train loss: 0.0007652054191567004 at step: 30400 lr 0.0001
+2024_08_09_23_42_38 Train loss: 0.0004665337619371712 at step: 30800 lr 0.0001
+2024_08_09_23_43_16 Train loss: 6.108067464083433e-05 at step: 31200 lr 0.0001
+(Val @ epoch 6) acc: 0.9915; ap: 0.9997029310618217
+Validation accuracy increased (0.990375 --> 0.991500).  Saving model ...
+*************************
+2024_08_09_23_44_07
+(0 progan    ) acc: 99.2; ap: 99.9
+(1 stylegan  ) acc: 79.1; ap: 90.9
+(2 stylegan2 ) acc: 70.4; ap: 96.6
+(3 biggan    ) acc: 68.5; ap: 74.2
+(4 cyclegan  ) acc: 66.9; ap: 70.8
+(5 stargan   ) acc: 99.5; ap: 100.0
+(6 gaugan    ) acc: 56.5; ap: 57.4
+(7 deepfake  ) acc: 64.1; ap: 97.2
+(8 Mean      ) acc: 75.5; ap: 85.9
+*************************
+2024_08_09_23_46_54
+2024_08_09_23_47_05 Train loss: 3.128571552224457e-05 at step: 31600 lr 0.0001
+2024_08_09_23_47_43 Train loss: 0.014162403531372547 at step: 32000 lr 0.0001
+2024_08_09_23_48_21 Train loss: 0.00023414586030412465 at step: 32400 lr 0.0001
+2024_08_09_23_48_59 Train loss: 8.006294592632912e-06 at step: 32800 lr 0.0001
+2024_08_09_23_49_37 Train loss: 0.00011280149919912219 at step: 33200 lr 0.0001
+2024_08_09_23_50_15 Train loss: 0.03906169533729553 at step: 33600 lr 0.0001
+2024_08_09_23_50_53 Train loss: 0.005704889073967934 at step: 34000 lr 0.0001
+2024_08_09_23_51_31 Train loss: 0.0002954431693069637 at step: 34400 lr 0.0001
+2024_08_09_23_52_09 Train loss: 0.00011997293040622026 at step: 34800 lr 0.0001
+2024_08_09_23_52_48 Train loss: 1.1795303862527362e-06 at step: 35200 lr 0.0001
+2024_08_09_23_53_26 Train loss: 0.0005396322812885046 at step: 35600 lr 0.0001
+2024_08_09_23_54_05 Train loss: 0.00936058722436428 at step: 36000 lr 0.0001
+(Val @ epoch 7) acc: 0.989; ap: 0.999277841446386
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_09_23_54_25
+(0 progan    ) acc: 98.9; ap: 99.9
+(1 stylegan  ) acc: 79.4; ap: 94.2
+(2 stylegan2 ) acc: 76.9; ap: 98.8
+(3 biggan    ) acc: 67.0; ap: 74.2
+(4 cyclegan  ) acc: 70.2; ap: 78.8
+(5 stargan   ) acc: 99.2; ap: 100.0
+(6 gaugan    ) acc: 61.7; ap: 65.9
+(7 deepfake  ) acc: 91.5; ap: 97.2
+(8 Mean      ) acc: 80.6; ap: 88.6
+*************************
+2024_08_09_23_57_12
+2024_08_09_23_57_52 Train loss: 6.120099556028435e-07 at step: 36400 lr 0.0001
+2024_08_09_23_58_30 Train loss: 8.70284711709246e-05 at step: 36800 lr 0.0001
+2024_08_09_23_59_08 Train loss: 6.740935987181729e-06 at step: 37200 lr 0.0001
+2024_08_09_23_59_46 Train loss: 7.2508496486989316e-06 at step: 37600 lr 0.0001
+2024_08_10_00_00_24 Train loss: 3.2363084301323397e-06 at step: 38000 lr 0.0001
+2024_08_10_00_01_02 Train loss: 3.385313175385818e-05 at step: 38400 lr 0.0001
+2024_08_10_00_01_40 Train loss: 0.00033038045512512326 at step: 38800 lr 0.0001
+2024_08_10_00_02_18 Train loss: 0.06089671701192856 at step: 39200 lr 0.0001
+2024_08_10_00_02_57 Train loss: 2.1348600967030507e-06 at step: 39600 lr 0.0001
+2024_08_10_00_03_35 Train loss: 4.345268735050922e-06 at step: 40000 lr 0.0001
+2024_08_10_00_04_13 Train loss: 4.9510137614561245e-05 at step: 40400 lr 0.0001
+(Val @ epoch 8) acc: 0.992; ap: 0.9996592288905681
+EarlyStopping counter: 2 out of 5
+*************************
+2024_08_10_00_04_46
+(0 progan    ) acc: 99.2; ap: 100.0
+(1 stylegan  ) acc: 80.8; ap: 91.9
+(2 stylegan2 ) acc: 78.1; ap: 97.2
+(3 biggan    ) acc: 67.8; ap: 72.1
+(4 cyclegan  ) acc: 64.0; ap: 68.1
+(5 stargan   ) acc: 99.2; ap: 100.0
+(6 gaugan    ) acc: 56.5; ap: 55.8
+(7 deepfake  ) acc: 92.7; ap: 97.7
+(8 Mean      ) acc: 79.8; ap: 85.3
+*************************
+2024_08_10_00_07_36
+2024_08_10_00_08_07 Train loss: 0.0005387160927057266 at step: 40800 lr 0.0001
+2024_08_10_00_08_45 Train loss: 0.0021846487652510405 at step: 41200 lr 0.0001
+2024_08_10_00_09_23 Train loss: 9.603743819752708e-06 at step: 41600 lr 0.0001
+2024_08_10_00_10_01 Train loss: 0.001607383950613439 at step: 42000 lr 0.0001
+2024_08_10_00_10_39 Train loss: 0.0017485830467194319 at step: 42400 lr 0.0001
+2024_08_10_00_11_17 Train loss: 6.0288111853878945e-06 at step: 42800 lr 0.0001
+2024_08_10_00_11_55 Train loss: 0.004463339690119028 at step: 43200 lr 0.0001
+2024_08_10_00_12_33 Train loss: 0.0001394070131937042 at step: 43600 lr 0.0001
+2024_08_10_00_13_12 Train loss: 0.000352473376551643 at step: 44000 lr 0.0001
+2024_08_10_00_13_50 Train loss: 7.188004383351654e-05 at step: 44400 lr 0.0001
+2024_08_10_00_14_28 Train loss: 0.00046592814032919705 at step: 44800 lr 0.0001
+(Val @ epoch 9) acc: 0.99475; ap: 0.9999415324147958
+Validation accuracy increased (0.991500 --> 0.994750).  Saving model ...
+*************************
+2024_08_10_00_15_10
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.6; ap: 91.6
+(2 stylegan2 ) acc: 77.9; ap: 98.3
+(3 biggan    ) acc: 61.1; ap: 68.0
+(4 cyclegan  ) acc: 60.4; ap: 66.6
+(5 stargan   ) acc: 99.2; ap: 100.0
+(6 gaugan    ) acc: 56.5; ap: 57.8
+(7 deepfake  ) acc: 78.1; ap: 98.1
+(8 Mean      ) acc: 76.8; ap: 85.0
+*************************
+2024_08_10_00_18_04
+2024_08_10_00_18_25 Train loss: 9.524434290142381e-07 at step: 45200 lr 0.0001
+2024_08_10_00_19_04 Train loss: 1.2777265510521829e-05 at step: 45600 lr 0.0001
+2024_08_10_00_19_43 Train loss: 9.271340786654036e-06 at step: 46000 lr 0.0001
+2024_08_10_00_20_21 Train loss: 6.92355606588535e-05 at step: 46400 lr 0.0001
+2024_08_10_00_21_00 Train loss: 0.0017060646787285805 at step: 46800 lr 0.0001
+2024_08_10_00_21_39 Train loss: 3.269858279963955e-05 at step: 47200 lr 0.0001
+2024_08_10_00_22_18 Train loss: 2.3466105631086975e-05 at step: 47600 lr 0.0001
+2024_08_10_00_22_59 Train loss: 0.00015549169620499015 at step: 48000 lr 0.0001
+2024_08_10_00_23_41 Train loss: 1.8089447166858008e-06 at step: 48400 lr 0.0001
+2024_08_10_00_24_23 Train loss: 0.008984819054603577 at step: 48800 lr 0.0001
+2024_08_10_00_25_03 Train loss: 7.784125045873225e-06 at step: 49200 lr 0.0001
+(Val @ epoch 10) acc: 0.9875; ap: 0.9996604401529493
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_10_00_25_56
+(0 progan    ) acc: 98.8; ap: 99.9
+(1 stylegan  ) acc: 81.6; ap: 90.6
+(2 stylegan2 ) acc: 76.1; ap: 97.4
+(3 biggan    ) acc: 65.0; ap: 70.3
+(4 cyclegan  ) acc: 64.8; ap: 72.7
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 56.2; ap: 58.8
+(7 deepfake  ) acc: 69.6; ap: 97.7
+(8 Mean      ) acc: 76.5; ap: 85.9
+*************************
+2024_08_10_00_28_48
+2024_08_10_00_29_00 Train loss: 8.327050454681739e-05 at step: 49600 lr 0.0001
+2024_08_10_00_29_38 Train loss: 8.073420758591965e-06 at step: 50000 lr 0.0001
+2024_08_10_00_30_17 Train loss: 7.800544699421152e-05 at step: 50400 lr 0.0001
+2024_08_10_00_30_56 Train loss: 2.4543789550079964e-05 at step: 50800 lr 0.0001
+2024_08_10_00_31_35 Train loss: 3.588945318711012e-08 at step: 51200 lr 0.0001
+2024_08_10_00_32_14 Train loss: 0.0003322343109175563 at step: 51600 lr 0.0001
+2024_08_10_00_32_53 Train loss: 0.0005894633359275758 at step: 52000 lr 0.0001
+2024_08_10_00_33_32 Train loss: 0.0007089007995091379 at step: 52400 lr 0.0001
+2024_08_10_00_34_12 Train loss: 8.255821012426168e-05 at step: 52800 lr 0.0001
+2024_08_10_00_34_52 Train loss: 5.97871548961848e-05 at step: 53200 lr 0.0001
+2024_08_10_00_35_30 Train loss: 1.3705046512768604e-05 at step: 53600 lr 0.0001
+2024_08_10_00_36_09 Train loss: 0.048408880829811096 at step: 54000 lr 0.0001
+(Val @ epoch 11) acc: 0.98675; ap: 0.9988307642604252
+EarlyStopping counter: 2 out of 5
+*************************
+2024_08_10_00_36_32
+(0 progan    ) acc: 98.7; ap: 99.9
+(1 stylegan  ) acc: 81.1; ap: 92.5
+(2 stylegan2 ) acc: 74.5; ap: 95.5
+(3 biggan    ) acc: 62.1; ap: 62.9
+(4 cyclegan  ) acc: 60.2; ap: 63.8
+(5 stargan   ) acc: 99.8; ap: 100.0
+(6 gaugan    ) acc: 58.9; ap: 57.6
+(7 deepfake  ) acc: 84.6; ap: 98.0
+(8 Mean      ) acc: 77.5; ap: 83.8
+*************************
+2024_08_10_00_39_38
+2024_08_10_00_40_18 Train loss: 0.00018459631246514618 at step: 54400 lr 0.0001
+2024_08_10_00_40_58 Train loss: 1.0319457942387089e-05 at step: 54800 lr 0.0001
+2024_08_10_00_41_39 Train loss: 1.027943017106736e-05 at step: 55200 lr 0.0001
+2024_08_10_00_42_18 Train loss: 3.360260234330781e-05 at step: 55600 lr 0.0001
+2024_08_10_00_42_57 Train loss: 1.7837912309914827e-05 at step: 56000 lr 0.0001
+2024_08_10_00_43_35 Train loss: 2.970655032186187e-06 at step: 56400 lr 0.0001
+2024_08_10_00_44_13 Train loss: 0.0026426215190440416 at step: 56800 lr 0.0001
+2024_08_10_00_44_51 Train loss: 1.4419496210393845e-06 at step: 57200 lr 0.0001
+2024_08_10_00_45_29 Train loss: 5.11038197146263e-05 at step: 57600 lr 0.0001
+2024_08_10_00_46_07 Train loss: 0.029194947332143784 at step: 58000 lr 0.0001
+2024_08_10_00_46_45 Train loss: 4.150102904532105e-05 at step: 58400 lr 0.0001
+(Val @ epoch 12) acc: 0.991375; ap: 0.9997284901721858
+EarlyStopping counter: 3 out of 5
+*************************
+2024_08_10_00_47_15
+(0 progan    ) acc: 99.4; ap: 100.0
+(1 stylegan  ) acc: 81.3; ap: 89.7
+(2 stylegan2 ) acc: 75.1; ap: 96.3
+(3 biggan    ) acc: 62.1; ap: 66.8
+(4 cyclegan  ) acc: 68.0; ap: 74.4
+(5 stargan   ) acc: 99.3; ap: 100.0
+(6 gaugan    ) acc: 55.6; ap: 55.4
+(7 deepfake  ) acc: 83.4; ap: 96.9
+(8 Mean      ) acc: 78.0; ap: 84.9
+*************************
+2024_08_10_00_50_02
+2024_08_10_00_50_32 Train loss: 6.774629923711473e-08 at step: 58800 lr 0.0001
+2024_08_10_00_51_13 Train loss: 0.002002259250730276 at step: 59200 lr 0.0001
+2024_08_10_00_51_51 Train loss: 6.322539320535725e-06 at step: 59600 lr 0.0001
+2024_08_10_00_52_29 Train loss: 8.934540574045968e-07 at step: 60000 lr 0.0001
+2024_08_10_00_53_07 Train loss: 0.00010954061872325838 at step: 60400 lr 0.0001
+2024_08_10_00_53_45 Train loss: 0.0029882644303143024 at step: 60800 lr 0.0001
+2024_08_10_00_54_23 Train loss: 0.0011376007460057735 at step: 61200 lr 0.0001
+2024_08_10_00_55_01 Train loss: 2.177964233851526e-05 at step: 61600 lr 0.0001
+2024_08_10_00_55_39 Train loss: 0.0022029380779713392 at step: 62000 lr 0.0001
+2024_08_10_00_56_17 Train loss: 1.1025805406461586e-06 at step: 62400 lr 0.0001
+2024_08_10_00_56_55 Train loss: 0.003205258399248123 at step: 62800 lr 0.0001
+(Val @ epoch 13) acc: 0.98525; ap: 0.9992917504080295
+EarlyStopping counter: 4 out of 5
+*************************
+2024_08_10_00_57_35
+(0 progan    ) acc: 98.7; ap: 99.9
+(1 stylegan  ) acc: 80.2; ap: 91.8
+(2 stylegan2 ) acc: 73.4; ap: 98.5
+(3 biggan    ) acc: 61.2; ap: 70.2
+(4 cyclegan  ) acc: 60.6; ap: 65.9
+(5 stargan   ) acc: 96.8; ap: 100.0
+(6 gaugan    ) acc: 52.0; ap: 53.6
+(7 deepfake  ) acc: 93.9; ap: 97.6
+(8 Mean      ) acc: 77.1; ap: 84.7
+*************************
+2024_08_10_01_00_22
+2024_08_10_01_00_43 Train loss: 2.6726465875981376e-06 at step: 63200 lr 0.0001
+2024_08_10_01_01_21 Train loss: 1.2770728062605485e-05 at step: 63600 lr 0.0001
+2024_08_10_01_02_00 Train loss: 0.00012700766092166305 at step: 64000 lr 0.0001
+2024_08_10_01_02_39 Train loss: 2.990645725731156e-06 at step: 64400 lr 0.0001
+2024_08_10_01_03_18 Train loss: 7.371487953378164e-08 at step: 64800 lr 0.0001
+2024_08_10_01_03_56 Train loss: 6.084991355237435e-07 at step: 65200 lr 0.0001
+2024_08_10_01_04_35 Train loss: 0.0006368130561895669 at step: 65600 lr 0.0001
+2024_08_10_01_05_15 Train loss: 3.661966184154153e-05 at step: 66000 lr 0.0001
+2024_08_10_01_05_54 Train loss: 2.684138235053979e-05 at step: 66400 lr 0.0001
+2024_08_10_01_06_32 Train loss: 1.4567682228516787e-05 at step: 66800 lr 0.0001
+2024_08_10_01_07_11 Train loss: 0.00045446513104252517 at step: 67200 lr 0.0001
+(Val @ epoch 14) acc: 0.994375; ap: 0.9997216413100438
+EarlyStopping counter: 5 out of 5
+Learning rate dropped by 10, continue training...
+*************************
+2024_08_10_01_08_03
+(0 progan    ) acc: 99.4; ap: 100.0
+(1 stylegan  ) acc: 80.7; ap: 92.1
+(2 stylegan2 ) acc: 75.8; ap: 96.6
+(3 biggan    ) acc: 62.4; ap: 70.0
+(4 cyclegan  ) acc: 66.2; ap: 76.3
+(5 stargan   ) acc: 99.6; ap: 100.0
+(6 gaugan    ) acc: 57.6; ap: 60.3
+(7 deepfake  ) acc: 70.7; ap: 97.5
+(8 Mean      ) acc: 76.5; ap: 86.6
+*************************
+2024_08_10_01_11_04
+2024_08_10_01_11_15 Train loss: 0.0001103033937397413 at step: 67600 lr 1e-05
+2024_08_10_01_11_53 Train loss: 3.8108366879896494e-06 at step: 68000 lr 1e-05
+2024_08_10_01_12_32 Train loss: 2.3099623831512872e-06 at step: 68400 lr 1e-05
+2024_08_10_01_13_10 Train loss: 1.21930639807033e-07 at step: 68800 lr 1e-05
+2024_08_10_01_13_49 Train loss: 2.545586767155328e-06 at step: 69200 lr 1e-05
+2024_08_10_01_14_27 Train loss: 2.483665866748197e-06 at step: 69600 lr 1e-05
+2024_08_10_01_15_06 Train loss: 6.7330302044865675e-06 at step: 70000 lr 1e-05
+2024_08_10_01_15_45 Train loss: 3.390653000678867e-05 at step: 70400 lr 1e-05
+2024_08_10_01_16_24 Train loss: 2.0010556909255683e-06 at step: 70800 lr 1e-05
+2024_08_10_01_17_02 Train loss: 8.372018669433601e-07 at step: 71200 lr 1e-05
+2024_08_10_01_17_41 Train loss: 5.626027814287227e-06 at step: 71600 lr 1e-05
+2024_08_10_01_18_20 Train loss: 0.0016614892520010471 at step: 72000 lr 1e-05
+(Val @ epoch 15) acc: 0.99475; ap: 0.9998364771597218
+Validation accuracy increased (-inf --> 0.994750).  Saving model ...
+*************************
+2024_08_10_01_18_46
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.1; ap: 90.7
+(2 stylegan2 ) acc: 74.7; ap: 97.5
+(3 biggan    ) acc: 62.9; ap: 70.8
+(4 cyclegan  ) acc: 65.2; ap: 75.2
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 55.8; ap: 57.3
+(7 deepfake  ) acc: 93.9; ap: 98.1
+(8 Mean      ) acc: 79.1; ap: 86.2
+*************************
+2024_08_10_01_22_12
+2024_08_10_01_23_00 Train loss: 1.562063403071079e-06 at step: 72400 lr 1e-05
+2024_08_10_01_23_45 Train loss: 9.693847005110001e-07 at step: 72800 lr 1e-05
+2024_08_10_01_24_30 Train loss: 8.6637692575664e-09 at step: 73200 lr 1e-05
+2024_08_10_01_25_17 Train loss: 3.0021656129974872e-05 at step: 73600 lr 1e-05
+2024_08_10_01_26_04 Train loss: 2.228222456324147e-06 at step: 74000 lr 1e-05
+2024_08_10_01_26_50 Train loss: 4.783477152159321e-07 at step: 74400 lr 1e-05
+2024_08_10_01_27_40 Train loss: 8.799670467851683e-07 at step: 74800 lr 1e-05
+2024_08_10_01_28_20 Train loss: 1.0773139365483075e-05 at step: 75200 lr 1e-05
+2024_08_10_01_29_00 Train loss: 2.2578738878564764e-10 at step: 75600 lr 1e-05
+2024_08_10_01_29_38 Train loss: 1.3562223557528341e-06 at step: 76000 lr 1e-05
+2024_08_10_01_30_16 Train loss: 2.6383699491816515e-07 at step: 76400 lr 1e-05
+(Val @ epoch 16) acc: 0.994; ap: 0.9999139286102636
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_10_01_30_47
+(0 progan    ) acc: 99.4; ap: 100.0
+(1 stylegan  ) acc: 80.8; ap: 92.2
+(2 stylegan2 ) acc: 74.1; ap: 97.8
+(3 biggan    ) acc: 63.5; ap: 73.5
+(4 cyclegan  ) acc: 67.0; ap: 80.7
+(5 stargan   ) acc: 99.7; ap: 100.0
+(6 gaugan    ) acc: 58.2; ap: 61.7
+(7 deepfake  ) acc: 94.7; ap: 98.4
+(8 Mean      ) acc: 79.7; ap: 88.0
+*************************
+2024_08_10_01_33_34
+2024_08_10_01_34_03 Train loss: 8.019973307682449e-08 at step: 76800 lr 1e-05
+2024_08_10_01_34_41 Train loss: 0.00020470921299420297 at step: 77200 lr 1e-05
+2024_08_10_01_35_19 Train loss: 1.013225300994236e-05 at step: 77600 lr 1e-05
+2024_08_10_01_35_57 Train loss: 1.518584547000046e-08 at step: 78000 lr 1e-05
+2024_08_10_01_36_35 Train loss: 3.324905151202984e-08 at step: 78400 lr 1e-05
+2024_08_10_01_37_13 Train loss: 4.035474887587043e-07 at step: 78800 lr 1e-05
+2024_08_10_01_37_51 Train loss: 1.0662493110658033e-07 at step: 79200 lr 1e-05
+2024_08_10_01_38_29 Train loss: 1.1421172985137673e-06 at step: 79600 lr 1e-05
+2024_08_10_01_39_07 Train loss: 1.9515848936890734e-09 at step: 80000 lr 1e-05
+2024_08_10_01_39_45 Train loss: 1.4800201952880343e-08 at step: 80400 lr 1e-05
+2024_08_10_01_40_23 Train loss: 3.618042399011756e-07 at step: 80800 lr 1e-05
+(Val @ epoch 17) acc: 0.99375; ap: 0.9999224587463261
+EarlyStopping counter: 2 out of 5
+*************************
+2024_08_10_01_41_03
+(0 progan    ) acc: 99.4; ap: 100.0
+(1 stylegan  ) acc: 81.1; ap: 91.8
+(2 stylegan2 ) acc: 75.5; ap: 98.2
+(3 biggan    ) acc: 64.6; ap: 73.4
+(4 cyclegan  ) acc: 67.0; ap: 78.6
+(5 stargan   ) acc: 100.0; ap: 100.0
+(6 gaugan    ) acc: 58.4; ap: 60.8
+(7 deepfake  ) acc: 94.5; ap: 98.3
+(8 Mean      ) acc: 80.1; ap: 87.6
+*************************
+2024_08_10_01_43_52
+2024_08_10_01_44_12 Train loss: 5.67870347367716e-06 at step: 81200 lr 1e-05
+2024_08_10_01_44_50 Train loss: 4.321077994973166e-06 at step: 81600 lr 1e-05
+2024_08_10_01_45_28 Train loss: 0.0004783123731613159 at step: 82000 lr 1e-05
+2024_08_10_01_46_06 Train loss: 2.275613297797463e-07 at step: 82400 lr 1e-05
+2024_08_10_01_46_44 Train loss: 1.6371923550195788e-07 at step: 82800 lr 1e-05
+2024_08_10_01_47_22 Train loss: 1.6400007325501065e-06 at step: 83200 lr 1e-05
+2024_08_10_01_48_00 Train loss: 3.2800625149320695e-07 at step: 83600 lr 1e-05
+2024_08_10_01_48_38 Train loss: 2.720477454420944e-10 at step: 84000 lr 1e-05
+2024_08_10_01_49_16 Train loss: 1.261655739881462e-07 at step: 84400 lr 1e-05
+2024_08_10_01_49_54 Train loss: 2.068770754704019e-07 at step: 84800 lr 1e-05
+2024_08_10_01_50_32 Train loss: 1.7765102722222537e-09 at step: 85200 lr 1e-05
+(Val @ epoch 18) acc: 0.99575; ap: 0.9999709797309202
+EarlyStopping counter: 3 out of 5
+*************************
+2024_08_10_01_51_23
+(0 progan    ) acc: 99.6; ap: 100.0
+(1 stylegan  ) acc: 81.8; ap: 89.3
+(2 stylegan2 ) acc: 78.7; ap: 97.7
+(3 biggan    ) acc: 65.8; ap: 73.2
+(4 cyclegan  ) acc: 65.6; ap: 75.1
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 58.6; ap: 60.6
+(7 deepfake  ) acc: 95.4; ap: 98.3
+(8 Mean      ) acc: 80.7; ap: 86.8
+*************************
+2024_08_10_01_54_09
+2024_08_10_01_54_19 Train loss: 5.962419891147874e-08 at step: 85600 lr 1e-05
+2024_08_10_01_54_57 Train loss: 6.825170544288994e-07 at step: 86000 lr 1e-05
+2024_08_10_01_55_35 Train loss: 5.130430054123281e-07 at step: 86400 lr 1e-05
+2024_08_10_01_56_13 Train loss: 9.193355765546585e-08 at step: 86800 lr 1e-05
+2024_08_10_01_56_51 Train loss: 4.699567957011652e-10 at step: 87200 lr 1e-05
+2024_08_10_01_57_29 Train loss: 6.735764145560097e-06 at step: 87600 lr 1e-05
+2024_08_10_01_58_07 Train loss: 1.9417869978610725e-08 at step: 88000 lr 1e-05
+2024_08_10_01_58_45 Train loss: 1.2222456007293658e-06 at step: 88400 lr 1e-05
+2024_08_10_01_59_23 Train loss: 1.7599395505385473e-06 at step: 88800 lr 1e-05
+2024_08_10_02_00_01 Train loss: 2.916473022196442e-05 at step: 89200 lr 1e-05
+2024_08_10_02_00_39 Train loss: 1.780206048351829e-06 at step: 89600 lr 1e-05
+2024_08_10_02_01_17 Train loss: 4.7944809011823963e-08 at step: 90000 lr 1e-05
+(Val @ epoch 19) acc: 0.99525; ap: 0.9999608382888611
+EarlyStopping counter: 4 out of 5
+*************************
+2024_08_10_02_01_40
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.7; ap: 92.5
+(2 stylegan2 ) acc: 77.0; ap: 98.5
+(3 biggan    ) acc: 67.1; ap: 74.7
+(4 cyclegan  ) acc: 69.3; ap: 79.6
+(5 stargan   ) acc: 100.0; ap: 100.0
+(6 gaugan    ) acc: 59.7; ap: 61.7
+(7 deepfake  ) acc: 95.5; ap: 98.4
+(8 Mean      ) acc: 81.2; ap: 88.2
+*************************
+2024_08_10_02_04_23
+2024_08_10_02_05_02 Train loss: 9.865898320526867e-09 at step: 90400 lr 1e-05
+2024_08_10_02_05_40 Train loss: 2.0825910440613882e-10 at step: 90800 lr 1e-05
+2024_08_10_02_06_18 Train loss: 5.973589622954023e-08 at step: 91200 lr 1e-05
+2024_08_10_02_06_56 Train loss: 2.2709469860160425e-09 at step: 91600 lr 1e-05
+2024_08_10_02_07_34 Train loss: 1.1805799671193995e-09 at step: 92000 lr 1e-05
+2024_08_10_02_08_12 Train loss: 9.723109997139545e-07 at step: 92400 lr 1e-05
+2024_08_10_02_08_50 Train loss: 1.6837395378388464e-05 at step: 92800 lr 1e-05
+2024_08_10_02_09_28 Train loss: 2.771168716719785e-08 at step: 93200 lr 1e-05
+2024_08_10_02_10_05 Train loss: 1.3313841407125437e-07 at step: 93600 lr 1e-05
+2024_08_10_02_10_43 Train loss: 2.054674312634841e-11 at step: 94000 lr 1e-05
+2024_08_10_02_11_21 Train loss: 1.6178954638235155e-06 at step: 94400 lr 1e-05
+saving the model at the end of epoch 20, iters 94521
+(Val @ epoch 20) acc: 0.994; ap: 0.9999749657257182
+EarlyStopping counter: 5 out of 5
+Learning rate dropped by 10, continue training...
+*************************
+2024_08_10_02_11_54
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.3; ap: 92.0
+(2 stylegan2 ) acc: 76.9; ap: 99.3
+(3 biggan    ) acc: 63.2; ap: 74.8
+(4 cyclegan  ) acc: 64.2; ap: 74.4
+(5 stargan   ) acc: 99.6; ap: 100.0
+(6 gaugan    ) acc: 56.8; ap: 60.2
+(7 deepfake  ) acc: 95.2; ap: 98.4
+(8 Mean      ) acc: 79.6; ap: 87.4
+*************************
+2024_08_10_02_14_41
+2024_08_10_02_15_09 Train loss: 7.770309395915831e-10 at step: 94800 lr 1.0000000000000002e-06
+2024_08_10_02_15_47 Train loss: 1.429061202706805e-09 at step: 95200 lr 1.0000000000000002e-06
+2024_08_10_02_16_25 Train loss: 5.935386904187823e-11 at step: 95600 lr 1.0000000000000002e-06
+2024_08_10_02_17_03 Train loss: 2.986482883216013e-08 at step: 96000 lr 1.0000000000000002e-06
+2024_08_10_02_17_41 Train loss: 1.8258543832416763e-07 at step: 96400 lr 1.0000000000000002e-06
+2024_08_10_02_18_19 Train loss: 1.1497767218315857e-06 at step: 96800 lr 1.0000000000000002e-06
+2024_08_10_02_18_57 Train loss: 1.5202925141011292e-08 at step: 97200 lr 1.0000000000000002e-06
+2024_08_10_02_19_35 Train loss: 1.8093472275992895e-09 at step: 97600 lr 1.0000000000000002e-06
+2024_08_10_02_20_13 Train loss: 0.00020241737365722656 at step: 98000 lr 1.0000000000000002e-06
+2024_08_10_02_20_51 Train loss: 7.616392849740805e-07 at step: 98400 lr 1.0000000000000002e-06
+2024_08_10_02_21_29 Train loss: 1.0719695131555795e-09 at step: 98800 lr 1.0000000000000002e-06
+(Val @ epoch 21) acc: 0.99325; ap: 0.9999285429571401
+Validation accuracy increased (-inf --> 0.993250).  Saving model ...
+*************************
+2024_08_10_02_22_11
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 80.9; ap: 92.1
+(2 stylegan2 ) acc: 74.4; ap: 99.0
+(3 biggan    ) acc: 64.5; ap: 74.5
+(4 cyclegan  ) acc: 66.6; ap: 76.4
+(5 stargan   ) acc: 99.8; ap: 100.0
+(6 gaugan    ) acc: 58.0; ap: 60.6
+(7 deepfake  ) acc: 95.1; ap: 98.3
+(8 Mean      ) acc: 79.8; ap: 87.6
+*************************
+2024_08_10_02_24_55
+2024_08_10_02_25_14 Train loss: 9.12918574069721e-10 at step: 99200 lr 1.0000000000000002e-06
+2024_08_10_02_25_52 Train loss: 9.256453381567553e-08 at step: 99600 lr 1.0000000000000002e-06
+2024_08_10_02_26_30 Train loss: 1.1784732079078708e-09 at step: 100000 lr 1.0000000000000002e-06
+2024_08_10_02_27_08 Train loss: 2.0912902698455582e-07 at step: 100400 lr 1.0000000000000002e-06
+2024_08_10_02_27_46 Train loss: 8.643005600106335e-08 at step: 100800 lr 1.0000000000000002e-06
+2024_08_10_02_28_24 Train loss: 6.545872288654664e-09 at step: 101200 lr 1.0000000000000002e-06
+2024_08_10_02_29_02 Train loss: 3.7209682091088325e-07 at step: 101600 lr 1.0000000000000002e-06
+2024_08_10_02_29_40 Train loss: 8.588567368406075e-08 at step: 102000 lr 1.0000000000000002e-06
+2024_08_10_02_30_18 Train loss: 2.4822566047078e-07 at step: 102400 lr 1.0000000000000002e-06
+2024_08_10_02_30_56 Train loss: 3.394983139060059e-08 at step: 102800 lr 1.0000000000000002e-06
+2024_08_10_02_31_34 Train loss: 3.008776516821854e-08 at step: 103200 lr 1.0000000000000002e-06
+(Val @ epoch 22) acc: 0.99475; ap: 0.9999529113777901
+EarlyStopping counter: 1 out of 5
+*************************
+2024_08_10_02_32_24
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.3; ap: 92.2
+(2 stylegan2 ) acc: 75.9; ap: 99.2
+(3 biggan    ) acc: 64.8; ap: 75.0
+(4 cyclegan  ) acc: 67.3; ap: 77.0
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 57.9; ap: 60.7
+(7 deepfake  ) acc: 95.2; ap: 98.3
+(8 Mean      ) acc: 80.2; ap: 87.8
+*************************
+2024_08_10_02_35_14
+2024_08_10_02_35_24 Train loss: 8.0013862202577e-09 at step: 103600 lr 1.0000000000000002e-06
+2024_08_10_02_36_02 Train loss: 9.371739650987365e-08 at step: 104000 lr 1.0000000000000002e-06
+2024_08_10_02_36_40 Train loss: 2.587022540634365e-10 at step: 104400 lr 1.0000000000000002e-06
+2024_08_10_02_37_18 Train loss: 1.0317777565660435e-07 at step: 104800 lr 1.0000000000000002e-06
+2024_08_10_02_37_56 Train loss: 3.257040148696433e-08 at step: 105200 lr 1.0000000000000002e-06
+2024_08_10_02_38_34 Train loss: 4.5908251422588364e-08 at step: 105600 lr 1.0000000000000002e-06
+2024_08_10_02_39_12 Train loss: 2.0883224316481375e-10 at step: 106000 lr 1.0000000000000002e-06
+2024_08_10_02_39_52 Train loss: 2.958638001260283e-09 at step: 106400 lr 1.0000000000000002e-06
+2024_08_10_02_40_30 Train loss: 8.991962374693685e-08 at step: 106800 lr 1.0000000000000002e-06
+2024_08_10_02_41_07 Train loss: 5.033535899201524e-07 at step: 107200 lr 1.0000000000000002e-06
+2024_08_10_02_41_45 Train loss: 2.965091019935251e-11 at step: 107600 lr 1.0000000000000002e-06
+2024_08_10_02_42_23 Train loss: 6.695622722929784e-09 at step: 108000 lr 1.0000000000000002e-06
+(Val @ epoch 23) acc: 0.99475; ap: 0.9999731727893294
+EarlyStopping counter: 2 out of 5
+*************************
+2024_08_10_02_42_46
+(0 progan    ) acc: 99.6; ap: 100.0
+(1 stylegan  ) acc: 81.2; ap: 92.3
+(2 stylegan2 ) acc: 76.0; ap: 99.2
+(3 biggan    ) acc: 63.3; ap: 75.1
+(4 cyclegan  ) acc: 65.3; ap: 76.5
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 56.9; ap: 60.8
+(7 deepfake  ) acc: 95.2; ap: 98.3
+(8 Mean      ) acc: 79.7; ap: 87.8
+*************************
+2024_08_10_02_45_38
+2024_08_10_02_46_17 Train loss: 3.880359145114198e-09 at step: 108400 lr 1.0000000000000002e-06
+2024_08_10_02_46_54 Train loss: 5.091421728664614e-10 at step: 108800 lr 1.0000000000000002e-06
+2024_08_10_02_47_32 Train loss: 8.875116752626866e-10 at step: 109200 lr 1.0000000000000002e-06
+2024_08_10_02_48_10 Train loss: 8.182960300473496e-06 at step: 109600 lr 1.0000000000000002e-06
+2024_08_10_02_48_49 Train loss: 1.1921446230189758e-07 at step: 110000 lr 1.0000000000000002e-06
+2024_08_10_02_49_27 Train loss: 9.692571723007859e-08 at step: 110400 lr 1.0000000000000002e-06
+2024_08_10_02_50_05 Train loss: 4.548042831231669e-09 at step: 110800 lr 1.0000000000000002e-06
+2024_08_10_02_50_43 Train loss: 8.445744725804616e-08 at step: 111200 lr 1.0000000000000002e-06
+2024_08_10_02_51_21 Train loss: 5.26144128265571e-10 at step: 111600 lr 1.0000000000000002e-06
+2024_08_10_02_51_59 Train loss: 5.723469961860239e-11 at step: 112000 lr 1.0000000000000002e-06
+2024_08_10_02_52_37 Train loss: 3.69067380823207e-11 at step: 112400 lr 1.0000000000000002e-06
+(Val @ epoch 24) acc: 0.994625; ap: 0.9999550626973358
+EarlyStopping counter: 3 out of 5
+*************************
+2024_08_10_02_53_09
+(0 progan    ) acc: 99.5; ap: 100.0
+(1 stylegan  ) acc: 81.3; ap: 91.9
+(2 stylegan2 ) acc: 75.9; ap: 99.0
+(3 biggan    ) acc: 65.0; ap: 73.7
+(4 cyclegan  ) acc: 67.4; ap: 77.1
+(5 stargan   ) acc: 99.9; ap: 100.0
+(6 gaugan    ) acc: 58.3; ap: 60.3
+(7 deepfake  ) acc: 95.0; ap: 98.3
+(8 Mean      ) acc: 80.3; ap: 87.5
+*************************
+2024_08_10_02_55_54
+2024_08_10_02_56_23 Train loss: 1.4901281986112735e-07 at step: 112800 lr 1.0000000000000002e-06
+2024_08_10_02_57_01 Train loss: 3.918774194033858e-09 at step: 113200 lr 1.0000000000000002e-06
+2024_08_10_02_57_39 Train loss: 3.695020511784719e-09 at step: 113600 lr 1.0000000000000002e-06
+2024_08_10_02_58_16 Train loss: 3.591240083089531e-10 at step: 114000 lr 1.0000000000000002e-06
+2024_08_10_02_58_54 Train loss: 6.0652689468088106e-12 at step: 114400 lr 1.0000000000000002e-06
+2024_08_10_02_59_32 Train loss: 5.640529016082141e-11 at step: 114800 lr 1.0000000000000002e-06
+2024_08_10_03_00_10 Train loss: 1.3008605748154878e-08 at step: 115200 lr 1.0000000000000002e-06
+2024_08_10_03_00_48 Train loss: 3.464728948188167e-09 at step: 115600 lr 1.0000000000000002e-06
+2024_08_10_03_01_26 Train loss: 7.687257053135e-09 at step: 116000 lr 1.0000000000000002e-06
+2024_08_10_03_02_04 Train loss: 1.752467948534786e-09 at step: 116400 lr 1.0000000000000002e-06
+2024_08_10_03_02_42 Train loss: 8.909383453215014e-09 at step: 116800 lr 1.0000000000000002e-06
+(Val @ epoch 25) acc: 0.995; ap: 0.9999612476668154
+EarlyStopping counter: 4 out of 5
+*************************
+2024_08_10_03_03_24
+(0 progan    ) acc: 99.6; ap: 100.0
+(1 stylegan  ) acc: 81.3; ap: 92.1
+(2 stylegan2 ) acc: 75.4; ap: 99.0
+(3 biggan    ) acc: 64.8; ap: 74.8
+(4 cyclegan  ) acc: 66.5; ap: 76.8
+(5 stargan   ) acc: 99.8; ap: 100.0
+(6 gaugan    ) acc: 57.5; ap: 60.4
+(7 deepfake  ) acc: 95.3; ap: 98.3
+(8 Mean      ) acc: 80.0; ap: 87.7
+*************************
+2024_08_10_03_06_09
+2024_08_10_03_06_28 Train loss: 2.994078585061288e-08 at step: 117200 lr 1.0000000000000002e-06
+2024_08_10_03_07_06 Train loss: 3.4572967706480995e-06 at step: 117600 lr 1.0000000000000002e-06
+2024_08_10_03_07_44 Train loss: 8.355576142093923e-08 at step: 118000 lr 1.0000000000000002e-06
+2024_08_10_03_08_22 Train loss: 9.920246568650981e-11 at step: 118400 lr 1.0000000000000002e-06
+2024_08_10_03_09_00 Train loss: 8.173266508038068e-10 at step: 118800 lr 1.0000000000000002e-06
+2024_08_10_03_09_38 Train loss: 1.405790484021452e-10 at step: 119200 lr 1.0000000000000002e-06
+2024_08_10_03_10_16 Train loss: 2.9551630587043576e-10 at step: 119600 lr 1.0000000000000002e-06
+2024_08_10_03_10_54 Train loss: 1.0513013792845527e-09 at step: 120000 lr 1.0000000000000002e-06
+2024_08_10_03_11_32 Train loss: 0.00010508736886549741 at step: 120400 lr 1.0000000000000002e-06
+2024_08_10_03_12_10 Train loss: 1.1054801518639579e-10 at step: 120800 lr 1.0000000000000002e-06
+2024_08_10_03_12_48 Train loss: 1.0677237566314446e-10 at step: 121200 lr 1.0000000000000002e-06
+wandb: - 0.011 MB of 0.011 MB uploadedwandb: \ 0.011 MB of 0.011 MB uploadedwandb: | 0.011 MB of 0.011 MB uploadedwandb: / 0.011 MB of 0.011 MB uploadedwandb: - 0.020 MB of 0.064 MB uploaded (0.002 MB deduped)wandb: \ 0.020 MB of 0.064 MB uploaded (0.002 MB deduped)wandb: | 0.020 MB of 0.064 MB uploaded (0.002 MB deduped)wandb: / 0.065 MB of 0.065 MB uploaded (0.002 MB deduped)wandb:                                                                                
+wandb: W&B sync reduced upload amount by 2.3%
+wandb: 
+wandb: Run history:
+wandb:         Epoch ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:      Mean_acc ▁▇▄▇▇▇▆█▇▆▆▇▇▆▆▇▇███▇▇█▇██
+wandb:       Mean_ap ▁▆▆▆▇▅▅█▅▄▅▃▄▄▆▅▇▇▆█▇▇▇▇▇▇
+wandb:    Train_loss ▂▁▁▁▁▆▁▁▁▁▁█▁▁▂▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  Val_accuracy ▁▇▇▇███████████████████████
+wandb:        Val_ap ▁▇▇▇███████████████████████
+wandb:    biggan_acc ▁█▆▆▇▆▇▆▇▄▆▄▄▄▄▄▅▅▆▇▅▅▅▅▅▅
+wandb:     biggan_ap ▅▇█▄█▆▇▇▆▄▅▁▃▅▅▅▇▇▇▇▇▇██▇▇
+wandb:  cyclegan_acc ▂▄▃█▃▃▄▆▃▁▃▁▅▁▄▄▄▄▄▆▃▄▅▄▅▄
+wandb:   cyclegan_ap ▆▄▄█▄▄▄▇▃▂▅▁▅▂▆▆█▇▆█▅▆▆▆▆▆
+wandb:  deepfake_acc ▄▆▁▇▆▇▃▇█▅▄▆▆█▄███████████
+wandb:   deepfake_ap ▁▂▇▇▇▇▇▇▇█▇█▇▇▇███████████
+wandb:    gaugan_acc ▂█▂▅▄▃▃▆▃▃▃▄▃▁▄▃▄▄▄▅▃▄▄▃▄▄
+wandb:     gaugan_ap ██▃▅▅▄▃▇▂▃▃▃▂▁▄▃▅▄▄▅▄▄▄▄▄▄
+wandb:    progan_acc ▁▇▇▇██████████████████████
+wandb:     progan_ap ▁▇█▇██████████████████████
+wandb:   stargan_acc ▁█▄█▇████████▇████████████
+wandb:    stargan_ap ▁█████████████████████████
+wandb:          step ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb: stylegan2_acc ▁▆▇▆█▅▅▇▇▇▇▆▆▆▇▆▆▇▇▇▇▆▇▇▇▆
+wandb:  stylegan2_ap ▁▇▇▇█▇▇█▇█▇▇▇█▇▇▇█▇███████
+wandb:  stylegan_acc ▁▇▆▇█▇▇▇██████████████████
+wandb:   stylegan_ap ▁█▇▇▇▅▆█▆▆▆▇▅▆▇▆▇▆▅▇▇▇▇▇▆▇
+wandb: 
+wandb: Run summary:
+wandb:         Epoch 27
+wandb:      Mean_acc 80.03307
+wandb:       Mean_ap 87.68655
+wandb:    Train_loss 0.0
+wandb:  Val_accuracy 0.99487
+wandb:        Val_ap 0.99996
+wandb:    biggan_acc 0.648
+wandb:     biggan_ap 0.74823
+wandb:  cyclegan_acc 0.6654
+wandb:   cyclegan_ap 0.76785
+wandb:  deepfake_acc 0.95264
+wandb:   deepfake_ap 0.98315
+wandb:    gaugan_acc 0.5754
+wandb:     gaugan_ap 0.60444
+wandb:    progan_acc 0.99562
+wandb:     progan_ap 0.99993
+wandb:   stargan_acc 0.9985
+wandb:    stargan_ap 1.0
+wandb:          step 121527
+wandb: stylegan2_acc 0.75369
+wandb:  stylegan2_ap 0.98992
+wandb:  stylegan_acc 0.81339
+wandb:   stylegan_ap 0.92142
+wandb: 
+wandb: 🚀 View run test-4class-resnet-car-cat-chair-horse2024_08_09_22_33_48 at: https://wandb.ai/dungeon_as_fate/CNNDetection_test_start/runs/udlfrm32
+wandb: ⭐️ View project at: https://wandb.ai/dungeon_as_fate/CNNDetection_test_start
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240809_223349-udlfrm32/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
+(Val @ epoch 26) acc: 0.994875; ap: 0.9999585328250129
+EarlyStopping counter: 5 out of 5
+Early stopping.

@@ -1,0 +1,8 @@
+nohup sh ./train/download_trainset.sh > ./train/download_trainset.log 2>&1 &
+391283
+
+nohup sh ./test/download_testset.sh > ./test/download_testset.log 2>&1 &
+391597
+
+nohup sh ./val/download_valset.sh > ./val/download_valset.log 2>&1 &
+391936

@@ -1,0 +1,9 @@
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.gif
+env/
+**/*.pth
+**/*.pkl
+**/wandb/
+!.gitkeep
